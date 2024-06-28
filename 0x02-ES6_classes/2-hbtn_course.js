@@ -3,10 +3,6 @@
 export default class HolbertonCourse {
   constructor(name, length, students) {
     // eslint-disable-next-line no-underscore-dangle
-    this._name = null;
-    this._length = null;
-    this._students = null;
-
     this._name = name;
     this._length = length;
     this._students = students;
@@ -29,6 +25,7 @@ export default class HolbertonCourse {
   }
 
   set length(value) {
+    // eslint-disable-next-line valid-typeof
     if (typeof value !== 'number') {
       throw new TypeError('Length must be a number');
     }
