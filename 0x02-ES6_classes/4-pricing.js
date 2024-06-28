@@ -9,24 +9,23 @@ export default class Pricing {
     return this._amount;
   }
 
-  set amount(value) {
-    this._amount = value;
+  set amount(amount) {
+    this._amount = amount;
   }
 
   get currency() {
     return this._currency;
   }
 
-  set currency(value) {
-    this._currency = value;
+  set currency(currency) {
+    this._currency = currency;
   }
 
   displayFullPrice() {
     return `${this.amount} ${this.currency.name} (${this.currency.code})`;
   }
 
-  // eslint-disable-next-line class-methods-use-this
-  convertPrice(amount, conversionRate) {
+  static convertPrice(amount, conversionRate) {
     return amount * conversionRate;
   }
 }
